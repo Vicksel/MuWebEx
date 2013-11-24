@@ -41,5 +41,5 @@ $database['Database']        = 'MuOnline';
 if($WindowsAuth == false)
 {
     $database['Login']       = 'sa';
-    $database['Password']    = 'gaujas37';
+    $database['Password']    = '';
 }
