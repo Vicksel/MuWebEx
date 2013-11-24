@@ -38,8 +38,12 @@ define('WEB_ENGINE','WEB_ENGINE');
 /*
  * Include required files
  */
-require 'system/configs/defines.php';
 
-require 'system/tools/Toolbox.php';
-require 'system/engine/Interfaces.php';
-require 'system/engine/PluginLoader.php';
+// Configs
+require 'system/configs/defines.php';
+// Tools
+require 'system/tools/input.php';       Input::Initialise();
+require 'system/tools/toolbox.php';
+// Engine
+require 'system/engine/interfaces.php';
+require 'system/engine/loader.php';
