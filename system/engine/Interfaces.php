@@ -52,6 +52,24 @@ interface IModule
 /**
  * Interface IModuleMin
  */
+interface IModuleMinEx
+{
+    /**
+     * Loads all required data for modules
+     *
+     */
+    public function Initialize();
+
+    /**
+     * Main plugin execution function
+     *
+     */
+    public function Execute();
+}
+
+/**
+ * Interface IModuleMin
+ */
 interface IModuleMin
 {
     /**

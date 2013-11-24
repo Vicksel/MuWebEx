@@ -42,6 +42,8 @@ define('WEB_ENGINE','WEB_ENGINE');
 // Configs
 require 'system/configs/defines.php';
 // Tools
+require 'system/tools/cache.php';
+require 'system/tools/template.php';
 require 'system/tools/security.php';
 require 'system/tools/input.php';       Input::Initialise();
 require 'system/tools/toolbox.php';
@@ -51,3 +53,6 @@ require 'system/tools/database.php';    $_SESSION['database'] = Database::initia
 require 'system/engine/interfaces.php';
 require 'system/engine/loader.php';
 require 'system/engine/controllers/module.php';
+require 'system/engine/execute.php';
+
+Execute::Plugin();

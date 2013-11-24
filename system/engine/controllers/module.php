@@ -23,7 +23,8 @@ class CModule
 
     public function __construct($name)
     {
-        $this->loader = new PluginLoader();
+        $this->loader   = new PluginLoader();
+        $this->template = new Template($name);
 
     }
 
