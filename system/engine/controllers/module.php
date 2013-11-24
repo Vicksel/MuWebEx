@@ -17,8 +17,15 @@ class CModule
     public $settings        = NULL;
     public $costumSettings  = NULL;
     public $database        = NULL;
+    public $loader          = NULL;
 
     public static $globalSettings = NULL;
+
+    public function __construct($name)
+    {
+        $this->loader = new PluginLoader();
+
+    }
 
 
 } 
