@@ -7,6 +7,9 @@
  *
  */
 
+if(!defined(WEB_ENGINE))
+    die('Direct access to system modules is forbidden!');
+
 class Toolbox
 {
     public static function writeLog($message,$prefix = NULL,$type= 'system',$includeTime = true)

@@ -7,6 +7,8 @@
  *
  */
 
+if(!defined(WEB_ENGINE))
+    die('Direct access to system modules is forbidden!');
 
 /**
  * Class PluginLoader

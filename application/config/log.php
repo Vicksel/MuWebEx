@@ -43,7 +43,7 @@ $config['log']['cat_status']['system']      = true;
 #
 #############################################################################
 
-$config['log']['common_folder']         = "Logs/$type/";
+$config['log']['common_folder']         = "application/logs/$type/";
 $config['log']['file_name']             = "".date('d_M_Y').".log";
 $config['log']['standard_logs']         = array(
     'system',
