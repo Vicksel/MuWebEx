@@ -13,7 +13,7 @@ class system_template extends CModule implements IModuleMinEx
 
     public function __construct()
     {
-        parent::__construct('template');
+        parent::__construct('template',PLUGIN_TYPE_SYSTEM);
     }
 
 

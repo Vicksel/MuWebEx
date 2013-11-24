@@ -21,11 +21,12 @@ class CModule
 
     public static $globalSettings = NULL;
 
-    public function __construct($name)
+    public function __construct($name,$type)
     {
         $this->loader   = new PluginLoader();
         $this->template = new Template($name);
 
+        $this->settings = simplexml_load_file("application/plugins/$type/$name/settings.xml");
     }
 
 
