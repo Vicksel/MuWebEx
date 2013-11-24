@@ -50,6 +50,22 @@ class Input
     }
 
     /**
+     * Overwrites selected key in post array
+     *
+     * @param $key
+     * @param $value
+     * @return bool
+     */
+    public static function OverwritePost($key,$value)
+    {
+        if(isset(self::$POST[$key]))
+        {
+            self::$POST[$key] = $value;
+        }
+        return false;
+    }
+
+    /**
      * Returns secure variable from $_POST request
      *
      * @param string $key
