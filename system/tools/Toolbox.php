@@ -63,4 +63,37 @@ class Toolbox
 
         file_put_contents($logFile ,"$time [".$userName."] $prefix $message" . PHP_EOL , FILE_APPEND); // Write prepared message to log file
     }
+
+    public static function userExecutablePlugin($name)
+    {
+        if(is_dir('application/plugins/modules/'.$name.'/') OR is_dir('application/plugins/block/'.$name.'/'))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public static function getPluginType($name)
+    {
+        $type = '';
+
+        if(is_dir('application/plugins/modules/'.$name.'/'))
+        {
+            $type = 'modules';
+        }
+        elseif(is_dir('application/plugins/block/'.$name.'/'))
+        {
+            $type = 'blocks';
+        }
+        return $type;
+    }
+
+    public static function isPluginValid($name)
+    {
+        if(is_file("system/data/$name.valid.php"))
+        {
+            return true;
+        }
+        return false;
+    }
 } 

@@ -69,7 +69,7 @@ require 'system/tools/database.php';    $_SESSION['database'] = Database::initia
 // Engine
 require 'system/engine/interfaces.php';
 require 'system/engine/loader.php';
-require 'system/engine/controllers/module.php';
+require 'system/engine/controller.php';
 require 'system/engine/execute.php';
 
 Execute::Plugin();
