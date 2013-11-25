@@ -31,6 +31,14 @@ if(!isset($_SESSION['token']))
 }
 
 /*
+ * Default User Language
+ */
+if(!isset($_SESSION['language']))
+{
+    $_SESSION['language'] = 'english';
+}
+
+/*
  * System File Protection
  */
 define('WEB_ENGINE','WEB_ENGINE');

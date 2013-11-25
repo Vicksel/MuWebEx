@@ -136,39 +136,47 @@ class Template {
         return false;
     }
 
+
     /**
      * Loads language file variables into language variable
+     * If new language array have same keys as existing language they
+     * will be replaced by newer language array keys
      *
-     * @throws Exception
+     * @param string $file
+     * @param string $defaultLanguage
+     * @param bool   $overwriteUser
+     * @param bool   $mergeWithCurrent
      */
-    public function prepareLanguage($file = 'default',$default = false)
+    public function prepareLanguage($file,$defaultLanguage = '',$overwriteUser = false,$mergeWithCurrent = false)
     {
         $language = array();
 
-        if($default == false)
+        if(is_file("application/languages/".$_SESSION['language']."/$file.php") AND $overwriteUser == false)
         {
-            $activeLanguage = $_SESSION['language'];
+            include "application/languages/".$_SESSION['language']."/$file.php";
+        }
+        elseif($defaultLanguage !== '' AND is_file("application/languages/".$_SESSION['language']."/$file.php"))
+        {
+            include "application/languages/".$defaultLanguage."/$file.php";
+        }
+
+        if($mergeWithCurrent)
+        {
+            $this->languageVariables = array_merge($this->languageVariables,$language);
         }
         else
         {
-            $activeLanguage = $default;
+            $this->languageVariables = $language;
         }
-
-        if(is_file("application/languages/$activeLanguage/$file.php"))
-        {
-            include "Languages/$activeLanguage/$file.php";
-        }
-
-        return $this->languageVariables =  $language;
     }
-
 
     /**
      * Parses a view file and outputs generated content.
      *
-     * @param null $viewFile
-     * @param bool $compact
-     * @throws Exception
+     * @param   null $viewFile
+     * @param   bool $compact
+     * @throws  Exception
+     * @returns string template parsed content
      */
     public function parseView($viewFile = NULL,$compact = true)
     {
@@ -243,6 +251,6 @@ class Template {
             $this->viewContent = preg_replace("/ +/", " ", $this->viewContent);
         }
 
-        echo $this->viewContent;
+        return $this->viewContent;
     }
 } 

@@ -53,7 +53,27 @@ class PluginLoader
     {
         if(!isset(self::$Plugins['library'][$Name]))
         {
-            require "application/library/$Name/Module.php";
+            require "application/libraries/$Name.php";
+
+            $PluginName = 'library_'.$Name;
+
+            self::$Plugins['library'][$Name] = new $PluginName();
+        }
+
+        return self::$Plugins['library'][$Name];
+    }
+
+    /**
+     * Loads library into memory
+     *
+     * @param string $Name
+     * @return mixed
+     */
+    public static function LoadLibraryEx($Name)
+    {
+        if(!isset(self::$Plugins['library'][$Name]))
+        {
+            require "application/libraries/$Name.php";
 
             $PluginName = 'library_'.$Name;
 

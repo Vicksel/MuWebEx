@@ -9,21 +9,29 @@
 
 class system_template extends CModule implements IModuleMinEx
 {
-    protected $Content;
+    protected $TemplateWrapper;
 
     public function __construct()
     {
         parent::__construct('template',PLUGIN_TYPE_SYSTEM);
     }
 
-
     public function Initialize()
     {
-
+        $this->TemplateWrapper =  $this->loader->LoadLibrary('template');
     }
 
     public function Execute()
     {
-        $this->template->parseView('template',false);
+        return $this->template->parseView('template',false);
+    }
+
+    public function Error_Module_Valid()
+    {
+        $this->template->prepareLanguage('module_not_valid');
+
+        $content =  $this->loader->LoadLibrary('template')->writePage($this->template->languageVariables['title'],$this->template->parseView('error_template',false));
+
+        $this->template->addLocalVariable('content',$content);
     }
 } 

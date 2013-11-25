@@ -62,15 +62,15 @@ class Execute
             }
             else
             {
-                // cannot access
+                $Design->template->addLocalVariable('content',$Plugin->Execute(''));
             }
         }
         else
         {
-            // Error plugin is not valid
+            $Design->Error_Module_Valid();
         }
 
-        $Design->Execute();
+        echo $Design->Execute();
     }
 
 } 
