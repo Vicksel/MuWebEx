@@ -15,7 +15,7 @@ class Execute
         $plugin_name    = Security::VerifyFileName(Input::Get('page'));
         $current_page   = $plugin_name == false ? 'home' : $plugin_name;
 
-        $PluginLoader   = new PluginLoader();
+        $PluginLoader   = new Loader();
 
         $Design         = $PluginLoader->LoadPlugin('template',PLUGIN_TYPE_SYSTEM);
 

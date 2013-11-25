@@ -13,7 +13,7 @@ if(!defined(WEB_ENGINE))
 /**
  * Class PluginLoader
  */
-class PluginLoader
+class Loader
 {
     /**
      * Holds current active plugins and library
@@ -41,6 +41,42 @@ class PluginLoader
         }
 
         return self::$Plugins[$Type][$Name];
+    }
+
+    /**
+     * Loads config into memory
+     *
+     * @param string $Name
+     * @return mixed
+     */
+    public function LoadConfig($Name)
+    {
+        if(!isset(self::$Plugins['Configs'][$Name]))
+        {
+            $config = array();
+
+            require "application/configs/$Name.php";
+
+            self::$Plugins['Configs'][$Name] = $config;
+        }
+
+        return self::$Plugins['Configs'][$Name];
+    }
+
+    /**
+     * Loads config into memory
+     *
+     * @param string $Name
+     * @return mixed
+     */
+    public function LoadSetting($Name)
+    {
+        if(!isset(self::$Plugins['Settings'][$Name]))
+        {
+            self::$Plugins['Settings'][$Name] = simplexml_load_file("application/configs/$Name.xml");
+        }
+
+        return self::$Plugins['Settings'][$Name];
     }
 
     /**

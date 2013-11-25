@@ -19,15 +19,30 @@ class CModule
     public $database        = NULL;
     public $loader          = NULL;
 
-    public static $globalSettings = NULL;
-
     public function __construct($name,$type)
     {
-        $this->loader   = new PluginLoader();
+        if($type !== PLUGIN_TYPE_SYSTEM)
+        {
+            $config = array();
+
+            require 'application/plugins/'.$type.'/'.$name.'/System.php';
+
+            $this->$configuration   = $config;
+
+            if($this->$configuration['requiresDatabase'] == true)
+            {
+                $this->database = new database();
+            }
+
+            if($this->$configuration['CostumSettings'])
+            {
+                $this->CSettings = simplexml_load_file('application/plugins/'.$type.'/'.$name.'/CSettings.xml');
+            }
+        }
+
+        $this->loader   = new Loader();
         $this->template = new Template($name);
 
         $this->settings = simplexml_load_file("application/plugins/$type/$name/settings.xml");
     }
-
-
 } 
