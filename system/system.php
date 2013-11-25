@@ -39,6 +39,15 @@ if(!isset($_SESSION['language']))
 }
 
 /*
+ * Default User Access
+ */
+if(!isset($_SESSION['access']))
+{
+    $_SESSION['access'] = 'guests';
+}
+
+
+/*
  * System File Protection
  */
 define('WEB_ENGINE','WEB_ENGINE');

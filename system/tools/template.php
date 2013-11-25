@@ -178,7 +178,7 @@ class Template {
      * @throws  Exception
      * @returns string template parsed content
      */
-    public function parseView($viewFile = NULL,$compact = true)
+    public function parseView($viewFile = NULL,$compact = true,$reparse = false)
     {
         if($viewFile != NULL)
         {
@@ -241,6 +241,16 @@ class Template {
                 if(!is_array($value))
                 {
                     $this->viewContent = str_replace("{".$key."}",$value,$this->viewContent);
+                }
+            }
+            if($reparse)
+            {
+                foreach($this->mergedVariables as $key => $value)
+                {
+                    if(!is_array($value))
+                    {
+                        $this->viewContent = str_replace("{".$key."}",$value,$this->viewContent);
+                    }
                 }
             }
         }

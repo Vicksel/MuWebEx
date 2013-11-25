@@ -34,4 +34,15 @@ class system_template extends CModule implements IModuleMinEx
 
         $this->template->addLocalVariable('content',$content);
     }
+
+    public function Error_Module_Access()
+    {
+        $this->template->prepareLanguage('module_no_access');
+
+        $this->template->addLocalVariable('required_access','admins');
+
+        $content =  $this->loader->LoadLibrary('template')->writePage($this->template->languageVariables['title'],$this->template->parseView('error_template',false,true));
+
+        $this->template->addLocalVariable('content',$content);
+    }
 } 

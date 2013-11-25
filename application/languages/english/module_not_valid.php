@@ -7,7 +7,7 @@
  *
  */
 
-$language['title']                  = 'Module Cannot be accessed!';
+$language['title']                  = 'Page not found!';
 
 $language['intro']                  = 'Well this is embracing, requested page is not found on this server, please try again or contact administrator for more information!';
 $language['reason_title']           = "Why i'm seeing this message?";

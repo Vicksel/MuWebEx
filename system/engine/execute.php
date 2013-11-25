@@ -67,7 +67,7 @@ class Execute
         }
         else
         {
-            $Design->Error_Module_Valid();
+            $Design->Error_Module_Access();
         }
 
         echo $Design->Execute();
