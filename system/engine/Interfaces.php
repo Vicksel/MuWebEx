@@ -105,3 +105,24 @@ interface IModuleMed
      */
     public function Execute();
 }
+
+/**
+ * IModuleMed
+ */
+interface IModuleMedEx
+{
+    /**
+     * A custom data validation function where costum data is validated
+     *
+     * @return array on success
+     *         false on failure
+     *
+     */
+    public function ValidateData();
+
+    /**
+     * Main plugin execution function
+     *
+     */
+    public function Execute();
+}
