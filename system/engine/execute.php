@@ -7,6 +7,8 @@
  *
  */
 
+define('CACHE_ENABLED','CACHE_ENABLED');
+
 class Execute
 {
     public static function Plugin()
@@ -159,11 +161,11 @@ class Execute
     {
         $Cache = new Cache('site_menu',5);
 
-       // if($Cache->CacheValid())
+        if($Cache->CacheValid())
         {
-        //    return json_decode(str_replace("'",'"',$Cache->CacheLoad(NULL)));
+            return json_decode(str_replace("'",'"',$Cache->CacheLoad(NULL)));
         }
-       // else
+        else
         {
             $Menu               = array();
             $AvailablePlugins   = scandir('application/plugins/modules/');
