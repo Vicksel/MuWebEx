@@ -1,6 +1,6 @@
 <?php
 
-class modules_home extends CModule implements IModuleMin
+class modules_home extends Controller implements IModuleMin
 {
     public function __construct()
     {

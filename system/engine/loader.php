@@ -120,6 +120,28 @@ class Loader
     }
 
     /**
+     * Loads language file into memory
+     *
+     * Used for internal engine translations
+     *
+     * @param string $Name
+     * @return mixed
+     */
+    public static function LoadLanguage($Name)
+    {
+        if(!isset(self::$Plugins['language'][$Name]))
+        {
+            $language = array();
+
+            require "application/languages/".$_SESSION['language']."/$Name.php";
+
+            self::$Plugins['language'][$Name] = $language;
+        }
+
+        return self::$Plugins['language'][$Name];
+    }
+
+    /**
      * Get's a list of currently loaded plugins or libraries
      *
      * @param string $Type

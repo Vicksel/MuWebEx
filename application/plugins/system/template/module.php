@@ -7,7 +7,7 @@
  *
  */
 
-class system_template extends CModule implements IModuleMinEx
+class system_template extends Controller implements IModuleMinEx
 {
     protected $TemplateWrapper;
 

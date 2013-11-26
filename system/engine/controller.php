@@ -10,7 +10,7 @@
 if(!defined(WEB_ENGINE))
     die('Direct access to system modules is forbidden!');
 
-class CModule
+class Controller
 {
     public $template        = NULL;
     public $config          = array();
@@ -23,9 +23,11 @@ class CModule
     {
         if($type !== PLUGIN_TYPE_SYSTEM)
         {
+            $config = array();
+
             require 'application/plugins/'.$type.'/'.$name.'/system.php';
 
-            $this->config   = (array)$config;
+            $this->config   = $config;
         }
 
         $this->loader   = new Loader();
