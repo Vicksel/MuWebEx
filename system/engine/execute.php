@@ -136,6 +136,7 @@ class Execute
                     }
 
                     $Design->template->addLocalVariable('menu',     self::GenerateMenu());
+                    $Design->template->addLocalVariable('blocks',   self::GenerateBlocks());
                     $Design->template->addLocalVariable('content',  $Plugin->Execute());
 
                     if($Plugin instanceof IModule)
@@ -194,5 +195,43 @@ class Execute
             }
             return $Menu;
         }
+    }
+
+    public static function GenerateBlocks()
+    {
+        $Block              = '';
+        $AvailablePlugins   = scandir('application/plugins/blocks/');
+
+        foreach($AvailablePlugins as $plugin)
+        {
+            if(Toolbox::isPluginValid($plugin))
+            {
+                $Loader = new Loader();
+
+                $pluginEx = $Loader->LoadPlugin($plugin,PLUGIN_TYPE_BLOCKS);
+
+                $Cache = new Cache('block_'.$plugin,$pluginEx->settings->cache_refresh_time,true,$pluginEx->config['CachePersonal']);
+
+                if($Cache->CacheValid() AND $pluginEx->settings->cache_enabled == 'true')
+                {
+                    $Block .= $Cache->CacheLoad();
+                }
+                else
+                {
+                    $accessLevels   = explode(',',(string)$pluginEx->settings->access_level);
+
+                    if(in_array($_SESSION['access'],$accessLevels,true))
+                    {
+                        $Block .= $pluginEx->Execute();
+
+                        if(!$Cache->CacheValid() AND $pluginEx->settings->cache_enabled == 'true')
+                        {
+                            $Cache->CacheCreate($Block,true);
+                        }
+                    }
+                }
+            }
+        }
+        return $Block;
     }
 } 
