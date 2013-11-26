@@ -47,11 +47,11 @@ class Cache
     {
         if($UserSpecified AND isset($_SESSION['account']))
         {
-            $this->CacheFile     = "Cached/$Name.".$_SESSION['account'].'.'.$_SESSION['access'].'.'.$_SESSION['language'].".php";
+            $this->CacheFile     = "application/cache/$Name.".$_SESSION['account'].'.'.$_SESSION['access'].'.'.$_SESSION['language'].".php";
         }
         else
         {
-            $this->CacheFile    = "Cached/$Name.".$_SESSION['access'].'.'.$_SESSION['language'].".php";
+            $this->CacheFile    = "application/cache/$Name.".$_SESSION['access'].'.'.$_SESSION['language'].".php";
         }
 
         $this->UserSpecified = $UserSpecified;
@@ -79,7 +79,7 @@ class Cache
         $toVar[] = $asVariable ?  '<?php $var='.'"'.PHP_EOL : '';
         $toVar[] = $asVariable ?  '"; ?>': '';
 
-        $Content[] = ($Content == NULL) ? ob_get_contents() : $Content;
+        $Content = ($Content == NULL) ? ob_get_contents() : $Content;
 
         $CacheFile = fopen($this->CacheFile, 'w');
 
@@ -112,20 +112,12 @@ class Cache
      * @param string $command
      * @return string
      */
-    public function CacheLoad($command = 'include')
+    public function CacheLoad($params = NULL)
     {
-        $token  = $_SESSION['token'];
         $var    = '';
 
         include $this->CacheFile;
 
-        if($command == 'include')
-        {
-            echo $var;
-        }
-        else
-        {
-            return $var;
-        }
+        return $var;
     }
 }

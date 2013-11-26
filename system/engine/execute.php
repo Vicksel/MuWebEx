@@ -133,7 +133,8 @@ class Execute
                         $Plugin->Initialize();
                     }
 
-                    $Design->template->addLocalVariable('content',$Plugin->Execute());
+                    $Design->template->addLocalVariable('menu',     self::GenerateMenu());
+                    $Design->template->addLocalVariable('content',  $Plugin->Execute());
 
                     if($Plugin instanceof IModule)
                     {
@@ -152,5 +153,44 @@ class Execute
         }
 
         echo $Design->Execute();
+    }
+
+    public static function GenerateMenu()
+    {
+        $Cache = new Cache('site_menu',5);
+
+       // if($Cache->CacheValid())
+        {
+        //    return json_decode(str_replace("'",'"',$Cache->CacheLoad(NULL)));
+        }
+       // else
+        {
+            $Menu               = array();
+            $AvailablePlugins   = scandir('application/plugins/modules/');
+
+            foreach($AvailablePlugins as $plugin)
+            {
+                if(Toolbox::isPluginValid($plugin))
+                {
+                    $language = array();
+
+                    require 'application/languages/'.$_SESSION['language'].'/'.$plugin.'.php';
+
+                    $plugin_        = simplexml_load_file('application/plugins/modules/'.$plugin.'/settings.xml');
+                    $accessLevels   = explode(',',(string)$plugin_->access_level);
+
+                    if(in_array($_SESSION['access'],$accessLevels,true))
+                    {
+                        $Menu[] = array(
+                            'name' => $language['title'],
+                            'link' => '?page='.$plugin,
+                        );
+                    }
+
+                    $Cache->CacheCreate(str_replace('"',"'",json_encode($Menu)),true);
+                }
+            }
+            return $Menu;
+        }
     }
 } 
