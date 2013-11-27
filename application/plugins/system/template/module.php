@@ -7,6 +7,9 @@
  *
  */
 
+if(!defined(MODULE_EXECUTE))
+    die('Direct access to system modules is forbidden!');
+
 class system_template extends Controller implements IModuleMinEx
 {
     protected $TemplateWrapper;
@@ -28,6 +31,7 @@ class system_template extends Controller implements IModuleMinEx
 
 
         $this->template->addLocalVariable('title',$GlobalConfig->site->title);
+        $this->template->addLocalVariable('footer',$GlobalConfig->site->footer);
 
         return $this->template->parseView('template',false);
     }

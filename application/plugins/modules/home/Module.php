@@ -1,5 +1,8 @@
 <?php
 
+if(!defined(MODULE_EXECUTE))
+    die('Direct access to system modules is forbidden!');
+
 class modules_home extends Controller implements IModuleMin
 {
     public function __construct()

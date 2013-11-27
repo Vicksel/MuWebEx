@@ -7,6 +7,9 @@
  *
  */
 
+if(!defined(WEB_ENGINE))
+    die('Direct access to system modules is forbidden!');
+
 class Template {
     /**
      * Contains all global scope variables that can be accessed from all template files.

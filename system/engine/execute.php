@@ -7,7 +7,11 @@
  *
  */
 
-define('CACHE_ENABLED','CACHE_ENABLED');
+if(!defined(WEB_ENGINE))
+    die('Direct access to system modules is forbidden!');
+
+define('CACHE_ENABLED', 'CACHE_ENABLED');
+define('MODULE_EXECUTE','MODULE_EXECUTE');
 
 class Execute
 {

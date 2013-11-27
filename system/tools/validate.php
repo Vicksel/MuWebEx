@@ -7,6 +7,9 @@
  *
  */
 
+if(!defined(WEB_ENGINE))
+    die('Direct access to system modules is forbidden!');
+
 $config['Validation']           = array(
     'form_login' => array(
         'Name'          => 'Username',
