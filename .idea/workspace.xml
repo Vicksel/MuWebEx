@@ -37,15 +37,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Module.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/plugins/modules/home/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="59" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="input.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/tools/input.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -100,19 +91,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="system.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="system.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/system.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/engine/controller.php">
+      <file leaf-file-name="template.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="94" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="799">
+            <state line="88" column="26" selection-start="3308" selection-end="3315" vertical-scroll-proportion="-10.461538" vertical-offset="1224" max-vertical-offset="2074">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/cache/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="4" selection-start="128" selection-end="128" vertical-scroll-proportion="0.21174377" vertical-offset="0" max-vertical-offset="562">
               <folding />
             </state>
           </provider>
@@ -345,7 +345,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="languages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,11 +419,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\cache" />
       <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\languages\english" />
       <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\system\data" />
       <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\views" />
       <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\plugins\blocks" />
-      <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\plugins\blocks\stats" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\KristiansJaunzems\MuWebEx\application\plugins\blocks" />
@@ -434,13 +492,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/muwebex.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="181" selection-end="181" vertical-scroll-proportion="0.14455782" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/plugins/system/template/module.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="28" selection-start="850" selection-end="850" vertical-scroll-proportion="-13.076923" vertical-offset="204" max-vertical-offset="901">
@@ -451,13 +502,6 @@
     <entry file="file://$PROJECT_DIR$/application/plugins/blocks/login/Module.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="384" selection-end="384" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2074">
           <folding />
         </state>
       </provider>
@@ -542,6 +586,20 @@
     <entry file="file://$PROJECT_DIR$/system/system.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="26" selection-start="3308" selection-end="3315" vertical-scroll-proportion="-10.461538" vertical-offset="1224" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/cache/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="128" selection-end="128" vertical-scroll-proportion="0.21174377" vertical-offset="0" max-vertical-offset="562">
           <folding />
         </state>
       </provider>
