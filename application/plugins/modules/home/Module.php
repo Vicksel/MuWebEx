@@ -7,6 +7,7 @@ class modules_home extends Controller implements IModuleMin
         parent::__construct('home',PLUGIN_TYPE_MODULES);
     }
 
+
     public function Execute()
     {
         $this->template->prepareLanguage('home');

@@ -13,7 +13,7 @@ if(!defined(WEB_ENGINE))
 class Security
 {
     /**
-     * Contains sensetive SQL keywords witch can lead to SQL injections.
+     * Contains sensitive SQL keywords witch can lead to SQL injections.
      * All these keywords will be replaced by array left value.
      *
      * @var array

@@ -18,12 +18,16 @@ class system_template extends Controller implements IModuleMinEx
 
     public function Initialize()
     {
-        $this->TemplateWrapper =  $this->loader->LoadLibrary('template');
+        $this->TemplateWrapper  = $this->loader->LoadLibrary('template');
+
     }
 
     public function Execute()
     {
+        $GlobalConfig     = $this->loader->LoadXMLConfig('muwebex');
 
+
+        $this->template->addLocalVariable('title',$GlobalConfig->site->title);
 
         return $this->template->parseView('template',false);
     }

@@ -27,88 +27,98 @@
     <favorites_list name="MuWebEx" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.6196944">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="execute.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/engine/execute.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="122" column="0" selection-start="5597" selection-end="5597" vertical-scroll-proportion="-3.9230769" vertical-offset="1870" max-vertical-offset="4012">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="module.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/plugins/system/template/module.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="26" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="-5.230769" vertical-offset="204" max-vertical-offset="833">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="settings.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/plugins/system/template/settings.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="27" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="loader.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/engine/loader.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="96.11539" vertical-offset="2499" max-vertical-offset="3060">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cache.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/tools/cache.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="69" column="63" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-4.1153846" vertical-offset="964" max-vertical-offset="1972">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="validate.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/system/tools/validate.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="63" column="198" selection-start="2349" selection-end="2513" vertical-scroll-proportion="-4.6153846" vertical-offset="849" max-vertical-offset="1275">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="controller.php" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/system/engine/controller.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="14" selection-start="914" selection-end="914" vertical-scroll-proportion="1.6790123" vertical-offset="0" max-vertical-offset="799">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="engine.php" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/application/languages/english/engine.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="2" selection-start="606" selection-end="606" vertical-scroll-proportion="0.76836157" vertical-offset="0" max-vertical-offset="238">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="execute.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/engine/execute.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="0" selection-start="6404" selection-end="6404" vertical-scroll-proportion="-7.1923075" vertical-offset="2091" max-vertical-offset="4029">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/plugins/modules/home/Module.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="59" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/tools/input.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.5" vertical-offset="663" max-vertical-offset="1428">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/tools/security.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="25" selection-start="263" selection-end="263" vertical-scroll-proportion="23.538462" vertical-offset="765" max-vertical-offset="4420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/tools/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="149" column="5" selection-start="3488" selection-end="3488" vertical-scroll-proportion="-1.9615384" vertical-offset="2380" max-vertical-offset="4488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loader.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/engine/loader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="131" column="68" selection-start="2866" selection-end="2866" vertical-scroll-proportion="-7.8846154" vertical-offset="1920" max-vertical-offset="3332">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cache.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/tools/cache.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="63" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-41.192307" vertical-offset="0" max-vertical-offset="1972">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/tools/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="56.884617" vertical-offset="1479" max-vertical-offset="3315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="system.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/system.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/engine/controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="94" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="799">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -126,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/languages/english/stats.php" />
-        <option value="$PROJECT_DIR$/application/plugins/blocks/stats/Module.php" />
-        <option value="$PROJECT_DIR$/application/languages/english/block_signup.php" />
-        <option value="$PROJECT_DIR$/application/views/block_signup.html" />
-        <option value="$PROJECT_DIR$/application/views/template.html" />
-        <option value="$PROJECT_DIR$/application/views/block_login.html" />
         <option value="$PROJECT_DIR$/application/plugins/blocks/login/Module.php" />
         <option value="$PROJECT_DIR$/application/languages/english/block_login.php" />
         <option value="$PROJECT_DIR$/application/plugins/blocks/signup/Module.php" />
         <option value="$PROJECT_DIR$/system/engine/module.php" />
         <option value="$PROJECT_DIR$/system/tools/validate.php" />
         <option value="$PROJECT_DIR$/application/languages/english/engine.php" />
-        <option value="$PROJECT_DIR$/system/engine/controller.php" />
         <option value="$PROJECT_DIR$/system/tools/cache.php" />
-        <option value="$PROJECT_DIR$/system/engine/execute.php" />
+        <option value="$PROJECT_DIR$/system/engine/loader.php" />
+        <option value="$PROJECT_DIR$/application/config/muwebex.xml" />
         <option value="$PROJECT_DIR$/application/plugins/system/template/module.php" />
+        <option value="$PROJECT_DIR$/system/engine/controller.php" />
+        <option value="$PROJECT_DIR$/application/views/template.html" />
+        <option value="$PROJECT_DIR$/system/engine/execute.php" />
+        <option value="$PROJECT_DIR$/application/plugins/modules/home/Module.php" />
+        <option value="$PROJECT_DIR$/system/tools/security.php" />
+        <option value="$PROJECT_DIR$/system/tools/template.php" />
       </list>
     </option>
   </component>
@@ -258,30 +268,8 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,11 +309,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stats" />
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MuWebEx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,77 +345,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="signup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="languages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MuWebEx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="languages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="english" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,7 +399,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="1" />
+    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -502,114 +434,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/plugins/blocks/login/Module.php">
+    <entry file="file://$PROJECT_DIR$/application/config/muwebex.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="149" selection-start="404" selection-end="415" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/languages/english/block_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="173" selection-end="173" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/data/signup.valid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/data/login.valid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/plugins/blocks/signup/System.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/plugins/blocks/signup/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/tools/Toolbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="46" selection-start="3432" selection-end="3432" vertical-scroll-proportion="-54.923077" vertical-offset="0" max-vertical-offset="1819">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/engine/Interfaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="33.346153" vertical-offset="867" max-vertical-offset="2159">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/languages/english/engine.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="2" selection-start="606" selection-end="606" vertical-scroll-proportion="0.76836157" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/tools/validate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="198" selection-start="2349" selection-end="2513" vertical-scroll-proportion="-4.6153846" vertical-offset="849" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/engine/loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="96.11539" vertical-offset="2499" max-vertical-offset="3060">
+        <state line="5" column="7" selection-start="181" selection-end="181" vertical-scroll-proportion="0.14455782" vertical-offset="0" max-vertical-offset="588">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/plugins/system/template/module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="-5.230769" vertical-offset="204" max-vertical-offset="833">
+        <state line="38" column="28" selection-start="850" selection-end="850" vertical-scroll-proportion="-13.076923" vertical-offset="204" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/plugins/system/template/settings.xml">
+    <entry file="file://$PROJECT_DIR$/application/plugins/blocks/login/Module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/tools/cache.php">
+    <entry file="file://$PROJECT_DIR$/application/views/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="63" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-4.1153846" vertical-offset="964" max-vertical-offset="1972">
+        <state line="10" column="34" selection-start="384" selection-end="384" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="2074">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/engine/execute.php">
+    <entry file="file://$PROJECT_DIR$/application/plugins/modules/home/settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="5597" selection-end="5597" vertical-scroll-proportion="-3.9230769" vertical-offset="1870" max-vertical-offset="4012">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/plugins/modules/home/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="59" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/engine/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="14" selection-start="914" selection-end="914" vertical-scroll-proportion="1.6790123" vertical-offset="0" max-vertical-offset="799">
+        <state line="45" column="94" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/engine/Interfaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="1" selection-start="906" selection-end="906" vertical-scroll-proportion="-0.19395018" vertical-offset="942" max-vertical-offset="2159">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/engine/loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="68" selection-start="2866" selection-end="2866" vertical-scroll-proportion="-7.8846154" vertical-offset="1920" max-vertical-offset="3332">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/tools/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="63" selection-start="2011" selection-end="2011" vertical-scroll-proportion="-41.192307" vertical-offset="0" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/tools/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="56.884617" vertical-offset="1479" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/tools/input.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="25.5" vertical-offset="663" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/tools/security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="263" selection-end="263" vertical-scroll-proportion="23.538462" vertical-offset="765" max-vertical-offset="4420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/tools/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="5" selection-start="3488" selection-end="3488" vertical-scroll-proportion="-1.9615384" vertical-offset="2380" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/engine/execute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="0" selection-start="6404" selection-end="6404" vertical-scroll-proportion="-7.1923075" vertical-offset="2091" max-vertical-offset="4029">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/system.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>

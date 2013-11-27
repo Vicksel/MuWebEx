@@ -120,6 +120,22 @@ class Loader
     }
 
     /**
+     * Loads site xml configuration into variable
+     *
+     * @param string $Name
+     * @return mixed
+     */
+    public static function LoadXMLConfig($Name)
+    {
+        if(!isset(self::$Plugins['XML'][$Name]))
+        {
+            self::$Plugins['XML'][$Name] = simplexml_load_file("application/config/$Name.xml");
+        }
+
+        return self::$Plugins['XML'][$Name];
+    }
+
+    /**
      * Loads language file into memory
      *
      * Used for internal engine translations

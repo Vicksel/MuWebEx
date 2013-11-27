@@ -94,7 +94,6 @@ class Template {
      */
     public function updateVariableValue($key,$add)
     {
-        echo $this->localVariables[$key];
         if(isset($this->localVariables[$key]))
         {
             $this->localVariables[$key] .= $add;

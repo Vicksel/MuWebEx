@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <site type="array" name="Site Configuration">
+        <title type="textbox" despriction="Your site name">MuWebEx</title>
+    </site>
+</config>

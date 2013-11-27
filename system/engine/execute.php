@@ -134,10 +134,11 @@ class Execute
                     {
                         $Plugin->Initialize();
                     }
+                    $Design->template->addLocalVariable('menu',         self::GenerateMenu());
+                    $Design->template->addLocalVariable('blocks',       self::GenerateBlocks());
+                    $Design->template->addLocalVariable('content',      $Plugin->Execute());
+                    $Design->template->addLocalVariable('module_title', $Plugin->template->languageVariables['title']);
 
-                    $Design->template->addLocalVariable('menu',     self::GenerateMenu());
-                    $Design->template->addLocalVariable('blocks',   self::GenerateBlocks());
-                    $Design->template->addLocalVariable('content',  $Plugin->Execute());
 
                     if($Plugin instanceof IModule)
                     {
