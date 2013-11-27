@@ -28,6 +28,16 @@ class Controller
             require 'application/plugins/'.$type.'/'.$name.'/system.php';
 
             $this->config   = $config;
+
+            if($this->config['requiresDatabase'] == true)
+            {
+                $this->database = new database();
+            }
+
+            if($this->config['CostumSettings'])
+            {
+            //    $this->CSettings = simplexml_load_file('application/plugins/'.$type.'/'.$name.'/CSettings.xml');
+            }
         }
 
         $this->loader   = new Loader();

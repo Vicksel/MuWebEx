@@ -46,7 +46,6 @@ if(!isset($_SESSION['access']))
     $_SESSION['access'] = 'guests';
 }
 
-
 /*
  * System File Protection
  */

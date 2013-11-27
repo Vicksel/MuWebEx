@@ -96,4 +96,13 @@ class Toolbox
         }
         return false;
     }
+
+    public static function strlenEx($string,$len)
+    {
+        if(isset($string[$len]))
+        {
+            return true;
+        }
+        return false;
+    }
 } 

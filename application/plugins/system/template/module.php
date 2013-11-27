@@ -23,6 +23,8 @@ class system_template extends Controller implements IModuleMinEx
 
     public function Execute()
     {
+
+
         return $this->template->parseView('template',false);
     }
 

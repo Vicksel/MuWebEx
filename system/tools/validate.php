@@ -20,6 +20,7 @@ class Validate
 {
     public static function Validate($ControlArray)
     {
+        $error = NULL;
         if(count($ControlArray) > 0)
         {
             foreach($ControlArray as $field => $value)
@@ -39,15 +40,14 @@ class Validate
                         }
                         break;
                     case 'digit':
-                        Input::OverwritePost($field,(string)Input::Post($field)); // http://us3.php.net/manual/en/function.ctype-digit.php
-
                         if(!ctype_digit(Input::Post($field)))
                         {
                             $error[] = $value['Name'].' is not valid, this field must contain only digits (0-9)';
                         }
                     break;
                     case 'mail':
-                        if (!filter_var(Input::Post($field), FILTER_VALIDATE_EMAIL)) {
+                        if (!filter_var(Input::Post($field), FILTER_VALIDATE_EMAIL))
+                        {
                             $error[] = $value['Name'].' is not valid email address, please recheck and try again';
                         }
                     break;
@@ -59,7 +59,7 @@ class Validate
 
                 if($value['Type'] != 'digit')
                 {
-                    if(strlen(Input::Post($field)) < $value['Length'][0] OR strlen(Input::Post($field)) > $value['Length'][1])
+                    if(strlen(Input::Post($field)) < $value['Length'][0]  OR strlen(Input::Post($field)) > $value['Length'][1])
                     {
                         $error[] = $value['Name'].' minimal length is '.$value['Length'][0].' and maximal length is '.$value['Length'][1].' characters, Your length:'.strlen(Input::Post($field)).'!';
                     }
@@ -71,5 +71,6 @@ class Validate
                 }
             }
         }
+        return $error;
     }
 } 

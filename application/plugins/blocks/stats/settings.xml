@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <!-- Module Global settings -->
+    <enabled>true</enabled>
+    <access_level>guests,vip,gold_vip,moderators,admins,members</access_level>
+
+    <!-- Module Cache settings -->
+    <cache_enabled>false</cache_enabled>
+    <cache_refresh_time>420</cache_refresh_time>
+
+    <!-- Module Language settings -->
+    <default_language overwrite_user="true">english</default_language>
+
+    <!-- System settings -->
+    <installed>true</installed>
+
+</config>

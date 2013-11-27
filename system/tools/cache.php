@@ -26,13 +26,8 @@ class Cache
      */
     private $CacheRefresh   = NULL;
     /**
-     * Enable basic cache file protection
+     * If enabled cache will be only available to current session user.
      *
-     * @var bool
-     */
-    private $Protection     = true;
-
-    /**
      * @var bool
      */
     private $UserSpecified  = false;
@@ -40,27 +35,24 @@ class Cache
     /**
      * @param string $Name          Cache file name
      * @param int    $ReloadTime    Cache reload time in minutes
-     * @param bool   $Protection    Enable basic cache file protection
      * @param bool   $UserSpecified Enable user access lock
      */
-    public function __construct($Name,$ReloadTime = 10,$Protection = true,$UserSpecified = false)
+    public function __construct($Name,$ReloadTime = 10,$UserSpecified = false)
     {
         if($UserSpecified AND isset($_SESSION['account']))
         {
-            $this->CacheFile     = "application/cache/$Name.".$_SESSION['account'].'.'.$_SESSION['access'].'.'.$_SESSION['language'].".php";
+            $this->CacheFile     = "application/cache/".md5($Name.".".$_SESSION['account'].'.'.$_SESSION['access'].'.'.$_SESSION['language']).".php";
         }
         else
         {
-            $this->CacheFile    = "application/cache/$Name.".$_SESSION['access'].'.'.$_SESSION['language'].".php";
+            $this->CacheFile    = "application/cache/".md5($Name.".".$_SESSION['access'].'.'.$_SESSION['language']).".php";
         }
 
         $this->UserSpecified = $UserSpecified;
-        $this->CacheRefresh  = ($ReloadTime * 60);
-        $this->Protection    = $Protection;
+        $this->CacheRefresh  = ((int)$ReloadTime * 60);
 
         ob_start();
     }
-
 
     /**
      * Creates and writes to new or existing cache files.
@@ -70,14 +62,13 @@ class Cache
      */
     public function CacheCreate($Content = NULL,$asVariable = false)
     {
-        $Protection = ($this->Protection)       ?
-            '<?php if(!defined("CACHE_ENABLED"))die("Direct access to cache is forbidden!"); ?>'.PHP_EOL : '';
+        $Protection = '<?php if(!defined("CACHE_ENABLED"))die("Direct access to cache is forbidden!"); ?>';
 
         $Protection .= ($this->UserSpecified)   ?
             '<?php if(!isset($_SESSION["account"]) AND $_SESSION["account"] !== "'. $_SESSION['account'].'") { return ""; } ?>' : PHP_EOL;
 
-        $toVar[] = $asVariable ?  '<?php $var='.'"'.PHP_EOL : '';
-        $toVar[] = $asVariable ?  '"; ?>': '';
+        $toVar[] = $asVariable ?  '<?php'.PHP_EOL.'$CacheVar = '.'"' : '';
+        $toVar[] = $asVariable ?  '";'.PHP_EOL.'?>': '';
 
         $Content = ($Content == NULL) ? ob_get_contents() : $Content;
 
@@ -96,7 +87,7 @@ class Cache
      */
     public function CacheValid()
     {
-        if(file_exists($this->CacheFile))
+        if(is_file($this->CacheFile))
         {
             if(time() - $this->CacheRefresh  < filemtime($this->CacheFile))
             {
@@ -109,15 +100,18 @@ class Cache
     /**
      * Executes current active cache file or returns it's content.
      *
-     * @param string $command
-     * @return string
+     * If cache is stored in variable it will be returned else
+     * content will be include and echoed and return value will be NULL
+     *
+     * @param   array  $params Passed argument list for cache file
+     * @return  string
      */
-    public function CacheLoad($params = NULL)
+    public function CacheLoad($params = array())
     {
-        $var    = '';
+        $CacheVar    = NULL;
 
         include $this->CacheFile;
 
-        return $var;
+        return $CacheVar;
     }
 }

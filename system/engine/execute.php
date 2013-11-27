@@ -28,7 +28,7 @@ class Execute
 
             if(in_array($_SESSION['access'],$accessLevels,true))
             {
-                $Cache      = new Cache($current_page,(int)$Plugin->settings->cache_refresh_time,true,false);
+                $Cache      = new Cache($current_page,$Plugin->settings->cache_refresh_time,false);
 
                 /**
                  * Automatic Post Validation
