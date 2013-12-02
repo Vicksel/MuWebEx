@@ -21,7 +21,7 @@ $config['Validation']           = array(
 );
 class Validate
 {
-    public static function Validate($ControlArray)
+    public static function ValidateArray($ControlArray)
     {
         $error = NULL;
         if(count($ControlArray) > 0)

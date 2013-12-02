@@ -177,6 +177,7 @@ class Template {
      *
      * @param   null $viewFile
      * @param   bool $compact
+     * @param   bool $reparse
      * @throws  Exception
      * @returns string template parsed content
      */
@@ -255,6 +256,9 @@ class Template {
                     }
                 }
             }
+
+            // Remove all unused variables
+            $this->viewContent = preg_replace("/{[^}]+}/", "", $this->viewContent);
         }
 
         if($compact == true)

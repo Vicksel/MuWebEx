@@ -27,7 +27,7 @@ class system_template extends Controller implements IModuleMinEx
 
     public function Execute()
     {
-        $GlobalConfig     = $this->loader->LoadXMLConfig('muwebex');
+        $GlobalConfig     = $this->loader->LoadSetting('muwebex');
 
 
         $this->template->addLocalVariable('title',$GlobalConfig->site->title);

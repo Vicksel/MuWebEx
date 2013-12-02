@@ -66,7 +66,7 @@ class Cache
     {
         $Protection = '<?php if(!defined("CACHE_ENABLED"))die("Direct access to cache is forbidden!"); ?>';
 
-        $Protection .= ($this->UserSpecified)   ?
+        $Protection .= (isset($_SESSION['account']) AND $this->UserSpecified)  ?
             '<?php if(!isset($_SESSION["account"]) AND $_SESSION["account"] !== "'. $_SESSION['account'].'") { return ""; } ?>' : PHP_EOL;
 
         $toVar[] = $asVariable ?  '<?php'.PHP_EOL.'$CacheVar = '.'"' : '';

@@ -6,7 +6,7 @@
     <access_level>guests,vip,gold_vip,moderators,admins,members</access_level>
 
     <!-- Module Cache settings -->
-    <cache_enabled>false</cache_enabled>
+    <cache_enabled>true</cache_enabled>
     <cache_refresh_time>420</cache_refresh_time>
 
     <!-- Module Language settings -->

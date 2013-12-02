@@ -37,107 +37,118 @@ class Execute
                 /**
                  * Automatic Post Validation
                  */
-                if($_SESSION['database'] == true AND $_SERVER['REQUEST_METHOD'] === 'POST' AND Input::Post('plugin_submit') !== false )
-                {
-                    $plugin_send = Input::Post('plugin_submit');
+                $ErrorList  = '';
 
-                    /*
-                     * We must check if sender form plugin is valid.
-                     *
-                     * We check if it is user executable(Block & Module type)
-                     * and if selected plugin is active on this system
-                     *
-                     */
-                    if(Toolbox::userExecutablePlugin($plugin_send) AND Toolbox::isPluginValid($plugin_send))
+                if($_SERVER['REQUEST_METHOD'] === 'POST' AND Input::Post('plugin_submit') !== false)
+                {
+                    if($_SESSION['database'] === true)
                     {
+                        $plugin_send = Input::Post('plugin_submit');
+
                         /*
-                         * If module have been passed initial check, we check if it is
-                         * already loaded on this system, if it's not it maybe injection attempt
+                         * We must check if sender form plugin is valid.
+                         *
+                         * We check if it is user executable(Block & Module type)
+                         * and if selected plugin is active on this system
                          *
                          */
-                        if($PluginLoader->isLoaded($plugin_send,Toolbox::getPluginType($plugin_send)))
+                        if(Toolbox::userExecutablePlugin($plugin_send) AND Toolbox::isPluginValid($plugin_send))
                         {
-                            if($_SESSION['token'] === Input::Get('session_token'))
+                            /*
+                             * If module have been passed initial check, we check if it is
+                             * already loaded on this system, if it's not it maybe injection attempt
+                             *
+                             */
+
+                            //if($PluginLoader->isLoaded($plugin_send,Toolbox::getPluginType($plugin_send)))
                             {
-                                $pluginEx   = $PluginLoader->LoadPlugin($plugin_send,Toolbox::getPluginType($plugin_send));
-                                $ErrorList  = '';
-                                $Passed     = true;
-
-                                if($pluginEx->config['requiresValidation'] == true)
+                                if($_SESSION['token'] === Input::Get('token'))
                                 {
-                                    $AutoValidation     = NULL;
-                                    $PluginValidation   = NULL;
+                                    $pluginEx   = $PluginLoader->LoadPlugin($plugin_send,Toolbox::getPluginType($plugin_send));
+                                    $Passed     = true;
 
-                                    if($pluginEx instanceof IModule OR $pluginEx instanceof IModuleMed OR $pluginEx instanceof IModuleMedEx)
+                                    if($pluginEx->config['requiresValidation'] == true)
                                     {
-                                        $PluginValidation = $Plugin->ValidateData();
-                                    }
+                                        $AutoValidation     = NULL;
+                                        $PluginValidation   = NULL;
 
-                                    $AutoValidation = Validate::validateArray($pluginEx->Config['Validation']);
+                                        if($pluginEx instanceof IModule OR $pluginEx instanceof IModuleMed OR $pluginEx instanceof IModuleMedEx)
+                                        {
+                                            $PluginValidation = $pluginEx->ValidateData();
+                                        }
 
-                                    if($AutoValidation !== NULL AND $PluginValidation !== NULL)
-                                    {
+                                        $AutoValidation = Validate::ValidateArray($pluginEx->config['Validation']);
+
                                         if(is_array($AutoValidation))
                                         {
                                             foreach($AutoValidation as $error)
                                             {
-                                                $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage(NULL,$error,'danger');
+                                                $ErrorList .= Loader::LoadLibraryEx('template')->writeMessage($error,'danger');
                                             }
+                                            $Passed = false;
                                         }
                                         if(is_array($PluginValidation))
                                         {
                                             foreach($PluginValidation as $error)
                                             {
-                                                $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage(NULL,$error,'danger');
+                                                $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage($error,'danger');
                                             }
+                                            $Passed = false;
                                         }
-                                        $Passed = false;
                                     }
-                                }
 
-                                if($Passed)
-                                {
-                                    if($pluginEx instanceof IModule OR $pluginEx instanceof IModuleMed)
+                                    if($Passed == true)
                                     {
-                                        $Plugin->SendData();
+                                        if($pluginEx instanceof IModule OR $pluginEx instanceof IModuleMed)
+                                        {
+                                            $Design->template->addLocalVariable('post_response',$Plugin->SendData());
+                                        }
                                     }
+
+                                    $_SESSION['token'] = md5(uniqid(rand(), true)); // Generate new Token
                                 }
                                 else
                                 {
-                                    if($ErrorList !== '')
-                                        $Design->template->updateVariableValue('validation_errors',$ErrorList);
+                                    $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage('Post token is not valid!'.$_SESSION['token'],'danger');
+
                                 }
                             }
-                            else
+                            //else
                             {
-                                // Session token is invalid
+                                //$ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage('Post request is not valid! Plugin is not active','danger');
                             }
                         }
                         else
                         {
-                            // User requested to post data to incorrect or inactive module
+                            $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage('Post request is not valid!','danger');
                         }
                     }
                     else
                     {
-                        // Requested POST request is not valid
-                        // Selected module or block is not valid
-                        // Or selected form is not valid type
+                        $ErrorList .= $PluginLoader->LoadLibrary('template')->writeMessage('Could not connect database!','danger');
                     }
-
-
                 }
+
+                $Design->template->addLocalVariable('errors',$ErrorList);
+
+                /** End of Automatic Post Validation */
+
+                /**
+                 * Cache Loader
+                 */
 
                 if($Plugin->settings->cache_enabled == 'true' AND $Cache->CacheValid())
                 {
                     $Cache->CacheLoad();
                 }
+
                 else
                 {
                     if($Plugin instanceof IModule OR $Plugin instanceof IModuleMinEx)
                     {
                         $Plugin->Initialize();
                     }
+
                     $Design->template->addLocalVariable('menu',         self::GenerateMenu());
                     $Design->template->addLocalVariable('blocks',       self::GenerateBlocks());
                     $Design->template->addLocalVariable('content',      $Plugin->Execute());
@@ -147,6 +158,11 @@ class Execute
                     if($Plugin instanceof IModule)
                     {
                         $Plugin->Clear();
+                    }
+
+                    if($Plugin->settings->cache_enabled == 'true' AND $Cache->CacheValid())
+                    {
+                        $Cache->CacheCreate(NULL,true);
                     }
                 }
             }
@@ -219,7 +235,7 @@ class Execute
 
                 if($Cache->CacheValid() AND $pluginEx->settings->cache_enabled == 'true')
                 {
-                    $Block .= $Cache->CacheLoad();
+                    $Block .= $Cache->CacheLoad(array('token' => $_SESSION['token']));
                 }
                 else
                 {

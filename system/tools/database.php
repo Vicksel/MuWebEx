@@ -42,7 +42,7 @@ class Database
             $database        = array();
             $ServerHost      = '';
 
-            require 'Application/config/database.php';
+            require 'application/config/database.php';
 
             self::$connection_link = sqlsrv_connect($ServerHost, $database);
 
@@ -176,7 +176,7 @@ class Database
         {
             foreach($error as $key)
             {
-                log::writeLog("SQLSTATE: ".$key['SQLSTATE']." CODE: ".$key[ 'code']." MESSAGE: ".$key[ 'message'],'Query Execution','sql-error');
+                Toolbox::writeLog("SQLSTATE: ".$key['SQLSTATE']." CODE: ".$key[ 'code']." MESSAGE: ".$key[ 'message'],'Query Execution','sql-error');
             }
         }
     }

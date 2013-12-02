@@ -20,7 +20,7 @@ class Loader
      *
      * @var array
      */
-    private static $Plugins = array();
+    public static $Plugins = array();
 
     /**
      * Loads plugin into memory
@@ -73,7 +73,7 @@ class Loader
     {
         if(!isset(self::$Plugins['Settings'][$Name]))
         {
-            self::$Plugins['Settings'][$Name] = simplexml_load_file("application/configs/$Name.xml");
+            self::$Plugins['Settings'][$Name] = simplexml_load_file("application/config/$Name.xml");
         }
 
         return self::$Plugins['Settings'][$Name];
@@ -117,22 +117,6 @@ class Loader
         }
 
         return self::$Plugins['library'][$Name];
-    }
-
-    /**
-     * Loads site xml configuration into variable
-     *
-     * @param string $Name
-     * @return mixed
-     */
-    public static function LoadXMLConfig($Name)
-    {
-        if(!isset(self::$Plugins['XML'][$Name]))
-        {
-            self::$Plugins['XML'][$Name] = simplexml_load_file("application/config/$Name.xml");
-        }
-
-        return self::$Plugins['XML'][$Name];
     }
 
     /**

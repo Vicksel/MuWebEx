@@ -61,6 +61,7 @@ require 'system/configs/defines.php';
 require 'system/tools/cache.php';
 require 'system/tools/template.php';
 require 'system/tools/security.php';
+require 'system/tools/validate.php';
 require 'system/tools/input.php';       Input::Initialise();
 require 'system/tools/toolbox.php';
 require 'system/tools/database.php';    $_SESSION['database'] = Database::initialize();

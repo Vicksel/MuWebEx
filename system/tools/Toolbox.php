@@ -66,7 +66,7 @@ class Toolbox
 
     public static function userExecutablePlugin($name)
     {
-        if(is_dir('application/plugins/modules/'.$name.'/') OR is_dir('application/plugins/block/'.$name.'/'))
+        if(is_dir('application/plugins/modules/'.$name.'/') OR is_dir('application/plugins/blocks/'.$name.'/'))
         {
             return true;
         }
@@ -81,7 +81,7 @@ class Toolbox
         {
             $type = 'modules';
         }
-        elseif(is_dir('application/plugins/block/'.$name.'/'))
+        elseif(is_dir('application/plugins/blocks/'.$name.'/'))
         {
             $type = 'blocks';
         }
@@ -97,12 +97,4 @@ class Toolbox
         return false;
     }
 
-    public static function strlenEx($string,$len)
-    {
-        if(isset($string[$len]))
-        {
-            return true;
-        }
-        return false;
-    }
 } 

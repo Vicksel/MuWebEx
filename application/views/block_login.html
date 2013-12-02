@@ -1,17 +1,18 @@
-<form accept-charset="UTF-8" role="form">
+<form accept-charset='UTF-8' role='form' method='post' action='?token=$params[token]'>
     <fieldset>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                <input type="text" class="form-control" placeholder="Username" />
+        <div class='form-group'>
+            <div class='input-group'>
+                <span class='input-group-addon'><span class='glyphicon glyphicon-user'></span></span>
+                <input type='text' class='form-control' name='form_username' placeholder='Username' />
             </div>
         </div>
-        <div class="form-group">
-            <div class="input-group">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                <input type="password" class="form-control" placeholder="Password" />
+        <div class='form-group'>
+            <div class='input-group'>
+                <span class='input-group-addon'><span class='glyphicon glyphicon-lock'></span></span>
+                <input type='password' class='form-control' placeholder='Password' />
             </div>
         </div>
-        <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+        <input type='hidden' name='plugin_submit' value='login'>
+        <input class='btn btn-lg btn-success btn-block' type='submit' value='Login'>
     </fieldset>
 </form>

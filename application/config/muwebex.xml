@@ -5,4 +5,7 @@
         <title type="textbox" description="Your site name">MuWebEx</title>
         <footer type="textbox" description="Your site name"> Copyright Kristians Jaunzems 2013</footer>
     </site>
+    <groups>
+        <group></group>
+    </groups>
 </config>
